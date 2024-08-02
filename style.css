@@ -1,0 +1,138 @@
+
+    /* BUTTON CSS STARTS */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+       
+    }
+    
+   /* Button styles */
+.animated-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    top: 100px;
+    left: 700px;
+}
+
+.animated-button:hover {
+    background-color: green;
+    transform: scale(1.1);
+}
+
+
+    /* BUTTON CSS ENDS */
+
+    /* blob code section start  */
+    /* blob code section start */
+/* Style the blob background container */
+.blob-background {
+    position: relative;
+    width: 50%;
+    height:300px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #8E2DE2, black, #8E2DE2); /* Purple to black gradient background */
+    /* background: linear-gradient(90deg, #8E2DE2, #4A00E0, #8E2DE2); Purple to black gradient background */
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-size: 200% 100%; /* Create space for animation */
+    animation: gradientAnimation 10s linear infinite smooth; /* Gradient animation */
+    top: 50px;
+}
+
+/* Style the animated blob */
+.blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f39c12; /* Blob color */
+    width: 200px; /* Adjust the size of the blob as needed */
+    height: 200px;
+    border-radius: 50%;
+    animation: blobAnimation 6s ease-in-out infinite alternate smooth; /* Adjust animation duration and timing function */
+    opacity: 0.8; /* Adjust the opacity of the blob */
+}
+
+/* Style the content within the blob background */
+.content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the blob */
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 1.35rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Define the blob animation */
+@keyframes blobAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Define the gradient animation for the background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+/* blob code section end */
+
+    /* blob code section end  */
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .press{
+        cursor: pointer;
+        color: white;
+        transition: 0.3s ease smooth;
+    }
+    .press:hover{
+        background-color: crimson;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 2;
+    }
+    .overlay-image {
+        position: relative;
+        top: 120px;
+        left: 770px;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 1; 
+    }
